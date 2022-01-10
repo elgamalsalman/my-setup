@@ -2,9 +2,9 @@
 My main coding setup, including OS, text editor and configuration files for both.
 
 ## Operating System : Arch Linux
-My Operating system of choice is Arch. After I do the basic arch setup (partitioning the disk, mounting the filesystem, etc) I run the following commands:
+My Operating system of choice is Arch. After I do the basic arch setup (partitioning the disk, creating the user, etc) I run the following commands:
 ```
-pacman -S base-devel grub efibootmng networkmanager git vim firefox 
+pacman -S base-devel grub efibootmng networkmanager sudo git vim firefox
 ```
 
 ## Text Editors
