@@ -4,7 +4,7 @@ My main coding setup, including OS, text editor and configuration files for both
 ## Operating System : Arch Linux
 My Operating system of choice is Arch. After I do the basic arch setup (partitioning the disk, mounting the filesystem, etc) I run the following commands:
 ```
-sudo pacman -S base linux linux-firmware sof-firmware base-devel grub efibootmng networkmanager git vim 
+pacman -S base-devel grub efibootmng networkmanager git vim firefox 
 ```
 
 ## Text Editors
