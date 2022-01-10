@@ -8,3 +8,6 @@ My main coding setup, including OS, text editor and configuration files for both
 - Text Editors:
   - Competitive Programming : [Vim](./cpvim/)
   - Web and App Development : [Neovim](./neovim/)
+
+# Arch Linux
+Arch Wiki : https://wiki.archlinux.org/title/installation_guide
