@@ -22,6 +22,7 @@ create a GPT partition table with 3 partitions:
   - sda1 : UEFI (size: +550M, type: EFI System)
   - sda2 : swap (size: 0 to +8G, type: Linux swap)
   - sda3 : filesystem (size: rest, type: Linux filesystem)
+
 then write the changes to the disk
 ```
 # mkfs.fat -F 32 /dev/sda1
