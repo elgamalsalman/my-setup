@@ -86,6 +86,7 @@ This assumes that you have followed the Installation Instructions and have arch 
 ```
 $ sudo pacman -S git xorg lightdm lightdm-webkit2-greeter lightdm-webkit-theme-litarvan xmonad xmonad-contrib xmobar dmenu picom nitrogen konsole firefox
 $ sudo systemctl enable lightdm
+$ mkdir .xmonad
 $ git clone https://aur.archlinux.org/yay.git
 $ cd yay
 $ makepkg -si
@@ -101,4 +102,5 @@ $ vim /etc/lightdm/lightdm-webkit2-greeter.conf
 ```
 and set `theme` to `litarvan`
 
-Then download [my .xprofile](./.xprofile) and place it in the user home directory.
+Then download my [.xprofile](./.xprofile) and place it in `/`
+Then download my [xmonad.hs](./xmonad.hs) and place it in `/.xmonad`
