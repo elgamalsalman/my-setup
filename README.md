@@ -36,10 +36,12 @@ then write the changes to the disk
 # pacstrap /mnt base linux linux-firmware base-devel grub efibootmgr networkmanager git vim 
 # genfstab -U /mnt >> /mnt/etc/fstab
 # arch-chroot /mnt
-# ln -sf /usr/share/zoneinfo/Egypt /etc/localtime
+# ln -sf /usr/share/zoneinfo/REGION/CITY /etc/localtime
 # hwclock --systohc
 # vim /etc/locale.gen
 ```
+replacing `REGION` and `CITY` with your location. Use `ls /usr/share/zoneinfo` to get the list of regions and `ls /usr/share/zoneinfo/REGION` for the list of cities in the specified region.
+
 now remove the `#` infront of the following line `#en_US.UTF-8 UTF-8` and then save and quit
 ```
 # vim /etc/locale.conf
