@@ -39,11 +39,11 @@ then write the changes to the disk
 # hwclock --systohc
 # vim /etc/locale.gen
 ```
-Now remove the `#` infront of the following line `#en_US.UTF-8 UTF-8` and then save and quit
+now remove the `#` infront of the following line `#en_US.UTF-8 UTF-8` and then save and quit
 ```
 # vim /etc/locale.conf
 ```
-And write the following in the file and save and quit
+and write the following in the file and save and quit
 ```
 LANG=en_US.UTF-8
 ```
@@ -51,17 +51,15 @@ then
 ```
 # vim /etc/hostname
 ```
-And write the hostname you prefer (e.g. `arch`) then save and quit
+and write the hostname you prefer (e.g. `arch`) then save and quit
 ```
 # visudo
 ```
-And remove the `#` infront of the line `# %wheel ALL=(ALL) ALL` then save and quit
+and remove the `#` infront of the line `# %wheel ALL=(ALL) ALL` then save and quit
 ```
 # passwd
 ```
-and choose a root password.
-
-Then
+and choose a root password then
 ```
 # useradd -m -G wheel -s /bin/bash USERNAME
 # passwd USERNAME
