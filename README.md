@@ -13,6 +13,10 @@ My main coding setup, including OS, text editor and configuration files for both
 Arch Wiki : https://wiki.archlinux.org/title/installation_guide
 
 ## Installation Instructions
+> If you are using vmware you have to first add this line to the virtual machine .VMX file
+> ```
+> firmware = "efi"
+> ```
 First make sure the internet connection is working by `ping google.com` then proceed to
 ```
 # timedatectl set-ntp true
