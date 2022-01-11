@@ -3,11 +3,12 @@ My main coding setup, including OS, text editor and configuration files for both
 
 **Setups**
 - Operating System : [Arch Linux](./arch/)
-- Display server : [Xorg](./xorg/)
-- Window Manager : [XMonad](./xmonad/)
+- Display server : [xorg](./xorg/)
+- Display Manager : [lightdm](./lightdm/)
+- Window Manager : [xmonad](./xmonad/)
 - Text Editors:
-  - Competitive Programming : [Vim](./cpvim/)
-  - Web and App Development : [Neovim](./neovim/)
+  - Competitive Programming : [vim](./cpvim/)
+  - Web and App Development : [neovim](./neovim/)
 
 # Arch Linux
 Arch Wiki : https://wiki.archlinux.org/title/installation_guide
