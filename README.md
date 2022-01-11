@@ -3,7 +3,7 @@ My main coding setup, including OS, text editor and configuration files for both
 
 **Setups**
 - Operating System : [Arch Linux](./arch/)
-- Display server : [xorg](./xorg/)
+- Display Server : [xorg](./xorg/)
 - Display Manager : [lightdm](./lightdm/)
 - Window Manager : [xmonad](./xmonad/)
 - Text Editors:
