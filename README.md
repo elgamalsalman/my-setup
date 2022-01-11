@@ -85,23 +85,24 @@ replacing `USERNAME` with the username you prefer and choosing a password
 ## Setup Instructions
 This assumes that you have followed the Installation Instructions and have arch up and running and you have signed into your user account.
 ```
-$ sudo pacman -S git xorg lightdm lightdm-webkit2-greeter lightdm-webkit-theme-litarvan xmonad xmonad-contrib xmobar dmenu picom nitrogen konsole firefox
+$ sudo pacman -S git xorg lightdm lightdm-webkit2-greeter lightdm-webkit-theme-litarvan xmonad xmonad-contrib xmobar dmenu picom nitrogen neofetch lxappeaerance qt5ct konsole firefox neovim pcmanfm mupdf
 $ sudo systemctl enable lightdm
 $ mkdir .xmonad
 $ git clone https://aur.archlinux.org/yay.git
 $ cd yay
 $ makepkg -si
 $ cd
+$ sudo rm -r yay
 ```
 set up lightdm litarvan theme using
 ```
-$ vim /etc/lightdm.conf
+$ sudo vim /etc/lightdm/lightdm.conf
 ```
 and set `greeter-session=lightdm-webkit2-greeter` then 
 ```
-$ vim /etc/lightdm/lightdm-webkit2-greeter.conf
+$ sudo vim /etc/lightdm/lightdm-webkit2-greeter.conf
 ```
-and set `theme` to `litarvan`
+and set `webkit_theme` to `litarvan`
 
 Then download my [.xprofile](./.xprofile) and place it in `/`             <br />
 Then download my [xmonad.hs](./xmonad.hs) and place it in `/.xmonad`      <br />
