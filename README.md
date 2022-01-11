@@ -102,5 +102,5 @@ $ vim /etc/lightdm/lightdm-webkit2-greeter.conf
 ```
 and set `theme` to `litarvan`
 
-Then download my [.xprofile](./.xprofile) and place it in `/`
-Then download my [xmonad.hs](./xmonad.hs) and place it in `/.xmonad`
+Then download my [.xprofile](./.xprofile) and place it in `/`             <br />
+Then download my [xmonad.hs](./xmonad.hs) and place it in `/.xmonad`      <br />
