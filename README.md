@@ -75,4 +75,30 @@ replacing `USERNAME` with the username you prefer and choosing a password
 ```
 # systemctl enable NetworkManager
 # grub-install /dev/sda
+# grub-mkconfig -o /boot/grub/grub.cfg
+# exit
+# umount -a
+# reboot
 ```
+
+## Setup Instructions
+This assumes that you have followed the Installation Instructions and have arch up and running and you have signed into your user account.
+```
+$ sudo pacman -S git xorg lightdm lightdm-webkit2-greeter lightdm-webkit-theme-litarvan xmonad xmonad-contrib xmobar dmenu picom nitrogen konsole firefox
+$ sudo systemctl enable lightdm
+$ git clone https://aur.archlinux.org/yay.git
+$ cd yay
+$ makepkg -si
+$ cd
+```
+set up lightdm litarvan theme using
+```
+$ vim /etc/lightdm.conf
+```
+and set `greeter-session=lightdm-webkit2-greeter` then 
+```
+$ vim /etc/lightdm/lightdm-webkit2-greeter.conf
+```
+and set `theme` to `litarvan`
+
+Then download [my .xprofile](./.xprofile) and place it in the user home directory.
