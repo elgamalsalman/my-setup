@@ -102,7 +102,16 @@ and set `greeter-session=lightdm-webkit2-greeter` then
 ```
 $ sudo vim /etc/lightdm/lightdm-webkit2-greeter.conf
 ```
-and set `webkit_theme` to `litarvan`
+and set `webkit\_theme` to `litarvan`
 
-Then download my [.xprofile](./.xprofile) and place it in `/`             <br />
-Then download my [xmonad.hs](./xmonad.hs) and place it in `/.xmonad`      <br />
+Then download my [.xprofile](./.xprofile) and place it in `/`			<br />
+Then download my [xmonad.hs](./xmonad.hs) and place it in `/.xmonad`		<br />
+Then download my [picom.conf](./picom.conf) and place it in `/.config/picom`	<br />
+
+and finally
+```
+reboot
+```
+
+> if your display doesn't fill the whole screen you can uncomment the `#display-setup-script=` line in your `/etc/lightdm/lightdm.conf` file and add `xrandx -s 1360x768` to the end of it replacing `1360x768` with your screen dimensions
+
