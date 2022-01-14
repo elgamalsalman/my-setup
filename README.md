@@ -4,7 +4,7 @@ My main coding setup with instructions and configuration files so that I and any
 - Operating System : [arch](./arch/)
 - Display Server : [xorg](./xorg/)
 - Display (Login) Manager : [lightdm](./lightdm/)
-- Window Manager : [xmonad](./xmonad/)
+- Tiling Window Manager : [xmonad](./xmonad/)
 - Application Launcher : [rofi]()
 - Terminal Emulator : [konsole]()
 - Text Editors : [fish-shell]()
