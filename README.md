@@ -1,12 +1,13 @@
 # mySetup
-My main coding setup, including OS, text editor and configuration files for both.
+My main coding setup with instructions and configuration files so that I and anyone else interested can easily make a replica of it on any computer.
 
-**Setups**
-- Operating System : [Arch Linux](./arch/)
+- Operating System : [arch](./arch/)
 - Display Server : [xorg](./xorg/)
-- Display Manager : [lightdm](./lightdm/)
+- Display (Login) Manager : [lightdm](./lightdm/)
 - Window Manager : [xmonad](./xmonad/)
-- Text Editors:
+- Application Launcher : [rofi]()
+- Terminal Emulator : [konsole]()
+- Text Editors : [fish-shell]()
   - Competitive Programming : [vim](./cpvim/)
   - Web and App Development : [neovim](./neovim/)
 
