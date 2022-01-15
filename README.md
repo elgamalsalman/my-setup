@@ -86,37 +86,37 @@ reboot
 ## Setup Instructions
 This assumes that you have followed the Installation Instructions and have arch up and running and you have signed into your user account.
 ```
-sudo pacman -S git xorg lightdm lightdm-webkit2-greeter xmonad xmonad-contrib xmobar rofi picom nitrogen neofetch lxappearance qt5ct konsole firefox neovim pcmanfm mupdf
+sudo pacman -Syu git xorg lightdm lightdm-webkit2-greeter xmonad xmonad-contrib xmobar rofi picom nitrogen neofetch lxappearance qt5ct konsole firefox neovim pcmanfm mupdf
 sudo systemctl enable lightdm
-mkdir .xmonad
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 cd
 sudo rm -r yay
 sudo yay -S lightdm-webkit-theme-aether
+mkdir .xmonad
+vim .xmonad/xmonad.hs
 ```
-set up lightdm litarvan theme using
+write this basic configuration just to get xmonad working on reboot
 ```
-sudo vim /etc/lightdm/lightdm.conf
+import XMonad
+main  = xmonad def
+  { terminal = "konsole"
+  }
 ```
-and set `greeter-session=lightdm-webkit2-greeter` then 
+then
 ```
-sudo vim /etc/lightdm/lightdm-webkit2-greeter.conf
+sudo pacman -Syu
+reboot
 ```
-and set `webkit\_theme` to `litarvan`
 
 Then download my [.bashrc](./.bashrc) and place it in `/`			<br />
 Then download my [.xprofile](./.xprofile) and place it in `/`			<br />
 Then download my [xmonad.hs](./xmonad.hs) and place it in `/.xmonad`		<br />
 Then download my [picom.conf](./picom.conf) and place it in `/.config/picom`	<br />
 
-and finally
-```
-sudo pacman -Syu
-reboot
-```
-
 > if your display doesn't fill the whole screen you can uncomment the `#display-setup-script=` line in your `/etc/lightdm/lightdm.conf` file and add `xrandx -s 1360x768` to the end of it replacing `1360x768` with your screen dimensions
 
 ## Github Connection Instructions
+
+First generate a new access token from github and copy it.
