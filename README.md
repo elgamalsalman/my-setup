@@ -14,7 +14,7 @@ My main coding setup with instructions and configuration files so that I and any
 
 # Arch Linux
 
-Arch Wiki : https://wiki.archlinux.org/title/installation\_guide
+Arch Wiki : https://wiki.archlinux.org/title/installation_guide
 
 ## Installation Instructions
 
@@ -57,7 +57,7 @@ vim /etc/locale.gen
 
 replacing `REGION` and `CITY` with your location. Use `ls /usr/share/zoneinfo` to get the list of regions and `ls /usr/share/zoneinfo/REGION` for the list of cities in the specified region.
 
-now remove the `#` infront of the following line `#en\_US.UTF-8 UTF-8` and then save and quit
+now remove the `#` infront of the following line `#en_US.UTF-8 UTF-8` and then save and quit
 
 ```
 vim /etc/locale.conf
