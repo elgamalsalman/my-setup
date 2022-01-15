@@ -94,6 +94,7 @@ cd yay
 makepkg -si
 cd
 sudo rm -r yay
+sudo yay -S lightdm-webkit-theme-aether
 ```
 set up lightdm litarvan theme using
 ```
