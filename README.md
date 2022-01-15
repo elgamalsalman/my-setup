@@ -86,7 +86,7 @@ reboot
 ## Setup Instructions
 This assumes that you have followed the Installation Instructions and have arch up and running and you have signed into your user account.
 ```
-sudo pacman -S git xorg lightdm lightdm-webkit2-greeter xmonad xmonad-contrib xmobar rofi picom nitrogen neofetch lxappeaerance qt5ct konsole firefox neovim pcmanfm mupdf
+sudo pacman -S git xorg lightdm lightdm-webkit2-greeter xmonad xmonad-contrib xmobar rofi picom nitrogen neofetch lxappearance qt5ct konsole firefox neovim pcmanfm mupdf
 sudo systemctl enable lightdm
 mkdir .xmonad
 git clone https://aur.archlinux.org/yay.git
