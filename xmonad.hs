@@ -40,7 +40,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     [ ((modm .|. controlMask, xK_t), spawn $ XMonad.terminal conf)
 
     -- launch rofi
-    , ((0, xK_Super_L), spawn "var=$(ps -e | grep rofi | wc -l); if [[ \"$var\" == \"0\" ]]; then LC_ALL=\"C\" rofi -modi \"window,run,ssh,drun\" -show-icons -normal-window -show drun; else killall rofi; fi")
+    , ((0, xK_Super_L), spawn "var=$(ps -e | grep rofi | wc -l); if [[ \"$var\" == \"0\" ]]; then rofi -modi \"window,run,ssh,drun\" -show-icons -normal-window -show drun; else killall rofi; fi")
 
     -- launch gmrun
     , ((modm .|. shiftMask, xK_p     ), spawn "gmrun")

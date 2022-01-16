@@ -110,14 +110,14 @@ reboot
 This assumes that you have followed the Installation Instructions and have arch up and running and you have signed into your user account.
 
 ```
-sudo pacman -Syu git xorg lightdm lightdm-webkit2-greeter xmonad xmonad-contrib xmobar rofi picom nitrogen neofetch lxappearance qt5ct konsole firefox neovim pcmanfm mupdf
+sudo pacman -Syu git xorg lightdm lightdm-webkit2-greeter xmonad xmonad-contrib xmobar rofi picom nitrogen neofetch lxappearance arc-solid-gtk-theme papirus-icon-theme qt5ct kvantum konsole firefox neovim pcmanfm mupdf
 sudo systemctl enable lightdm
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 cd
 sudo rm -r yay
-sudo yay -S lightdm-webkit-theme-aether
+sudo yay -S lightdm-webkit-theme-aether arc-kde-git
 mkdir .xmonad
 vim .xmonad/xmonad.hs
 ```
@@ -142,12 +142,17 @@ Then download my [.bashrc](./.bashrc) and place it in `/`			<br />
 Then download my [.xprofile](./.xprofile) and place it in `/`			<br />
 Then download my [xmonad.hs](./xmonad.hs) and place it in `/.xmonad`		<br />
 Then download my [picom.conf](./picom.conf) and place it in `/.config/picom`	<br />
+Then download my [environment](./environment) and place it in `/etc`		<br />
 
 > if your display doesn't fill the whole screen you can uncomment the `#display-setup-script=` line in your `/etc/lightdm/lightdm.conf` file and add `xrandx -s 1360x768` to the end of it replacing `1360x768` with your screen dimensions
 
 > To set your wallpaper use nitrogen which you have already installed if you followed the setup instructions. You can find some cool wallpapers in the [wallpapers](./wallpapers) folder of this repository.
 
-> To change rofi theme run `rofi-theme-selector` in the terminal
+> To change the system theme and icons for both gtk and qt applications do the following. For gtk open lxappearance and choose from the installed themes, I personally use arc dark with papirus icons. For qt open qt5ct and change the theme to kvantum and open the kvantum manager, click change/delete theme and choose the theme you want.
+
+> To change konsole theme hit `ctrl-shift-,` create a new profile, and make it the default. Change the theme to arc dark or breeze. If a menu bar is visible at the top you can remove it by clicking on the settings tab and uncheck show menubar and all toolbars shown.
+
+> To change rofi theme run `rofi-theme-selector` in the terminal, I use arc dark too.
 
 ## Github Connection Instructions
 
