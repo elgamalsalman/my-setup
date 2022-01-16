@@ -143,9 +143,11 @@ Then download my [.xprofile](./.xprofile) and place it in `/`			<br />
 Then download my [xmonad.hs](./xmonad.hs) and place it in `/.xmonad`		<br />
 Then download my [picom.conf](./picom.conf) and place it in `/.config/picom`	<br />
 
+> if your display doesn't fill the whole screen you can uncomment the `#display-setup-script=` line in your `/etc/lightdm/lightdm.conf` file and add `xrandx -s 1360x768` to the end of it replacing `1360x768` with your screen dimensions
+
 > To set your wallpaper use nitrogen which you have already installed if you followed the setup instructions. You can find some cool wallpapers in the [wallpapers](./wallpapers) folder of this repository.
 
-> if your display doesn't fill the whole screen you can uncomment the `#display-setup-script=` line in your `/etc/lightdm/lightdm.conf` file and add `xrandx -s 1360x768` to the end of it replacing `1360x768` with your screen dimensions
+> To change rofi theme run `rofi-theme-selector` in the terminal
 
 ## Github Connection Instructions
 

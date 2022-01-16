@@ -4,9 +4,9 @@
 -- IMPORTS
 import XMonad
 import XMonad.Layout.Spacing
-import XMonad.Hooks.RefocusLast
 import Data.Monoid
 import System.Exit
+import System.Process
 
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
@@ -39,12 +39,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- launch a terminal
     [ ((modm .|. controlMask, xK_t), spawn $ XMonad.terminal conf)
 
-    -- Just a test
-    , ((modm, xK_x), toggleFocus)
-
-    -- launch dmenu
-    , ((modm, xK_p), 
-                      sequence_ [spawn "dmenu_run"])
+    -- launch rofi
+    , ((0, xK_Super_L), spawn "var=$(ps -e | grep rofi | wc -l); if [[ \"$var\" == \"0\" ]]; then LC_ALL=\"C\" rofi -modi \"window,run,ssh,drun\" -show-icons -normal-window -show drun; else killall rofi; fi")
 
     -- launch gmrun
     , ((modm .|. shiftMask, xK_p     ), spawn "gmrun")
@@ -109,7 +105,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- mod-[1..9], Switch to workspace N
     -- mod-shift-[1..9], Move client to workspace N
     --
-    [((m .|. modm, k), windows $ f i)
+    [((m .|. mod4Mask, k), sequence_ [windows $ f i, spawn "sleep 0.05; killall rofi"])
         | (i, k) <- zip (XMonad.workspaces conf) [xK_1 .. xK_9]
         , (f, m) <- [(W.greedyView, 0), (W.shift, shiftMask)]]
     ++
@@ -172,6 +168,7 @@ finalLayout = spacingRaw False (Border 7 7 7 7) True (Border 7 7 7 7) True $ myL
 myManageHook = composeAll
     [ className =? "MPlayer"        --> doFloat
     , className =? "Gimp"           --> doFloat
+    , className =? "Rofi"           --> doFloat
     , resource  =? "desktop_window" --> doIgnore
     , resource  =? "kdesktop"       --> doIgnore ]
 
@@ -183,7 +180,7 @@ myEventHook = mempty
 ------------------------------------------------
 --         STATUS BARS AND LOGGING            --
 ------------------------------------------------
-myLogHook = refocusLastLogHook
+myLogHook = return ()
 
 ------------------------------------------------
 --              STARTUP HOOK                  --
