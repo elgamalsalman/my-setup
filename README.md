@@ -117,8 +117,9 @@ cd yay
 makepkg -si
 cd
 sudo rm -r yay
-sudo yay -S lightdm-webkit-theme-aether arc-kde-git
-mkdir .xmonad
+sudo yay -S lightdm-webkit-theme-aether arc-kde-git picom-ibhagwan-git
+mkdir ~/.xmonad
+mkdir -p ~/.config/picom
 vim .xmonad/xmonad.hs
 ```
 
@@ -141,8 +142,12 @@ reboot
 Then download my [.bashrc](./.bashrc) and place it in `/`			<br />
 Then download my [.xprofile](./.xprofile) and place it in `/`			<br />
 Then download my [xmonad.hs](./xmonad.hs) and place it in `/.xmonad`		<br />
-Then download my [picom.conf](./picom.conf) and place it in `/.config/picom`	<br />
+Then download my [picom.conf](./picom.conf) and place it in `/.config/picom/`	<br />
 Then download my [environment](./environment) and place it in `/etc`		<br />
+
+> if you are using vmware make sure you enable accelerated 3d graphics so that picom's glx backend (which is needed for blurring) doesn't freeze all the windows.
+
+> Also install vmware tools for a shared clipboard between the host and the guest.
 
 > if your display doesn't fill the whole screen you can uncomment the `#display-setup-script=` line in your `/etc/lightdm/lightdm.conf` file and add `xrandx -s 1360x768` to the end of it replacing `1360x768` with your screen dimensions
 
@@ -152,7 +157,9 @@ Then download my [environment](./environment) and place it in `/etc`		<br />
 
 > To change konsole theme hit `ctrl-shift-,` create a new profile, and make it the default. Change the theme to arc dark or breeze. If a menu bar is visible at the top you can remove it by clicking on the settings tab and uncheck show menubar and all toolbars shown.
 
-> To change rofi theme run `rofi-theme-selector` in the terminal, I use arc dark too.
+> To change rofi theme run `rofi-theme-selector` in the terminal, I use arc dark here too.
+
+> There is an arc theme for firefox if you are into that, click on the 3 bar menu > more tools > customise toolbar.
 
 ## Github Connection Instructions
 
