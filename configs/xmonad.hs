@@ -4,6 +4,7 @@
 -- IMPORTS
 import XMonad
 import XMonad.Layout.Spacing
+import XMonad.Layout.NoBorders
 import Data.Monoid
 import System.Exit
 import System.Process
@@ -21,9 +22,9 @@ myFocusFollowsMouse :: Bool
 myFocusFollowsMouse = True
 
 ---- Border
-myBorderWidth   = 0
-myNormalBorderColor  = "#dddddd"
-myFocusedBorderColor = "#ff0000"
+myBorderWidth   = 2
+myNormalBorderColor  = "#333333"
+myFocusedBorderColor = "#606080"
 
 ---- Mod mask
 myModMask       = mod1Mask
@@ -160,7 +161,7 @@ myLayout = tiled ||| Mirror tiled ||| Full
 ------------------------------------------------
 
 -- gaps between windows
-finalLayout = spacingRaw False (Border 7 7 7 7) True (Border 7 7 7 7) True $ myLayout
+finalLayout = smartBorders $ spacingRaw False (Border 7 7 7 7) True (Border 7 7 7 7) True $ myLayout
 
 ------------------------------------------------
 --               WINDOW RULES                 --
@@ -169,6 +170,7 @@ myManageHook = composeAll
     [ className =? "MPlayer"        --> doFloat
     , className =? "Gimp"           --> doFloat
     , className =? "Rofi"           --> doFloat
+    , className =? "Rofi"           --> hasBorder False
     , resource  =? "desktop_window" --> doIgnore
     , resource  =? "kdesktop"       --> doIgnore ]
 
@@ -190,7 +192,9 @@ myStartupHook = return ()
 ------------------------------------------------
 --                   RUN                      --
 ------------------------------------------------
-main = xmonad defaults
+main = do
+  spawn "xmobar &"
+  xmonad defaults
 
 defaults = def {
       -- simple stuff
