@@ -118,6 +118,7 @@ makepkg -si
 cd
 sudo rm -r yay
 sudo yay -S lightdm-webkit-theme-aether arc-kde-git picom-ibhagwan-git
+chsh -s /usr/bin/fish
 mkdir ~/.xmonad
 mkdir -p ~/.config/picom
 mkdir -p ~/.local/share/fonts
@@ -140,8 +141,6 @@ sudo pacman -Syu
 reboot
 ```
 
-Next open Konsole settings create a new default profile and change the Command to `/bin/fish` instead of `/bin/bash`.
-
 Then download my [config.fish](./configs/config.fish) and place it in `~/.config/fish/`			<br />
 Then download my [.xprofile](./configs/.xprofile) and place it in `~/`			<br />
 Then download my [xmonad.hs](./configs/xmonad.hs) and place it in `~/.xmonad/`		<br />
@@ -149,6 +148,7 @@ Then download my [picom.conf](./configs/picom.conf) and place it in `~/.config/p
 Then download my [environment](./configs/environment) and place it in `/etc/`		<br />
 Then download the [DarkOneNuanced.colorscheme](./colorschemes/DarkOneNuanced.colorscheme) and place it in `~/.local/share/konsole/`		<br />
 Then download the [Fira Code Nerd Font](./fonts/FiraCodeRegularNerdFontComplete.ttf) and place it in `~/.local/share/fonts/`		<br />
+Then, if you are into it, download my [neofetch-config.conf](./configs/neofetch-config.conf), rename it to `config.conf` and place it in `~/.config/neofetch/`		<br />
 
 > if you are using vmware make sure you enable accelerated 3d graphics so that picom's glx backend (which is needed for blurring) doesn't freeze all the windows.
 
