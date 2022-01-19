@@ -7,6 +7,6 @@
 
 PS1='[\u@\h \W]\$ '
 
-alias ls='ls -la --color=auto'
+alias ls='exa -lags=type --color-scale --icons --git'
 
-neofetch
+neofetch;
