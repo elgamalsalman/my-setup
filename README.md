@@ -110,7 +110,7 @@ reboot
 This assumes that you have followed the Installation Instructions and have arch up and running and you have signed into your user account.
 
 ```
-sudo pacman -Syu git xorg lightdm lightdm-webkit2-greeter xmonad xmonad-contrib xmobar rofi picom nitrogen neofetch lxappearance arc-solid-gtk-theme papirus-icon-theme qt5ct kvantum konsole firefox neovim pcmanfm file-roller mupdf exa
+sudo pacman -Syu git xorg lightdm lightdm-webkit2-greeter xmonad xmonad-contrib xmobar rofi picom nitrogen neofetch lxappearance arc-solid-gtk-theme papirus-icon-theme qt5ct kvantum konsole firefox neovim pcmanfm file-roller mupdf exa ttf-fira-code
 sudo systemctl enable lightdm
 git clone https://aur.archlinux.org/yay.git
 cd yay
@@ -139,11 +139,12 @@ sudo pacman -Syu
 reboot
 ```
 
-Then download my [.bashrc](./.bashrc) and place it in `/`			<br />
-Then download my [.xprofile](./.xprofile) and place it in `/`			<br />
-Then download my [xmonad.hs](./xmonad.hs) and place it in `/.xmonad`		<br />
-Then download my [picom.conf](./picom.conf) and place it in `/.config/picom/`	<br />
-Then download my [environment](./environment) and place it in `/etc`		<br />
+Then download my [.bashrc](./.bashrc) and place it in `~/`			<br />
+Then download my [.xprofile](./.xprofile) and place it in `~/`			<br />
+Then download my [xmonad.hs](./xmonad.hs) and place it in `~/.xmonad/`		<br />
+Then download my [picom.conf](./picom.conf) and place it in `~/.config/picom/`	<br />
+Then download my [environment](./environment) and place it in `/etc/`		<br />
+Then download the [DarkOneNuanced.colorscheme](./DarkOneNuanced.colorscheme) and place it in `~/.local/share/konsole/`		<br />
 
 > if you are using vmware make sure you enable accelerated 3d graphics so that picom's glx backend (which is needed for blurring) doesn't freeze all the windows.
 
@@ -155,7 +156,7 @@ Then download my [environment](./environment) and place it in `/etc`		<br />
 
 > To change the system theme and icons for both gtk and qt applications do the following. For gtk open lxappearance and choose from the installed themes, I personally use arc dark with papirus icons. For qt open qt5ct and change the theme to kvantum and open the kvantum manager, click change/delete theme and choose the theme you want.
 
-> To change konsole theme hit `ctrl-shift-,` create a new profile, and make it the default. Change the theme to arc dark or breeze. If a menu bar is visible at the top you can remove it by clicking on the settings tab and uncheck show menubar and all toolbars shown.
+> To change konsole theme hit `ctrl-shift-,` create a new profile, and make it the default. Change the theme to Dark One Nuanced. If a menu bar is visible at the top you can remove it by clicking on the settings tab and uncheck show menubar and all toolbars shown. Change the font to Fira Code for cool ligatures.
 
 > To change rofi theme run `rofi-theme-selector` in the terminal, I use arc dark here too.
 
