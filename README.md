@@ -140,7 +140,7 @@ sudo pacman -Syu
 reboot
 ```
 
-Then download my [.bashrc](./configs/.bashrc) and place it in `~/`			<br />
+Then download my [config.fish](./configs/config.fish) and place it in `~/.config/fish/`			<br />
 Then download my [.xprofile](./configs/.xprofile) and place it in `~/`			<br />
 Then download my [xmonad.hs](./configs/xmonad.hs) and place it in `~/.xmonad/`		<br />
 Then download my [picom.conf](./configs/picom.conf) and place it in `~/.config/picom/`	<br />
