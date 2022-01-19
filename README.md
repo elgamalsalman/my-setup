@@ -110,7 +110,7 @@ reboot
 This assumes that you have followed the Installation Instructions and have arch up and running and you have signed into your user account.
 
 ```
-sudo pacman -Syu git xorg lightdm lightdm-webkit2-greeter xmonad xmonad-contrib xmobar rofi picom nitrogen neofetch lxappearance arc-solid-gtk-theme papirus-icon-theme qt5ct kvantum konsole firefox neovim pcmanfm file-roller mupdf exa ttf-fira-code
+sudo pacman -Syu git xorg lightdm lightdm-webkit2-greeter xmonad xmonad-contrib xmobar rofi picom nitrogen neofetch lxappearance arc-solid-gtk-theme papirus-icon-theme qt5ct kvantum konsole firefox neovim pcmanfm file-roller mupdf exa ttf-fira-code fish
 sudo systemctl enable lightdm
 git clone https://aur.archlinux.org/yay.git
 cd yay
@@ -140,6 +140,8 @@ sudo pacman -Syu
 reboot
 ```
 
+Next open Konsole settings create a new default profile and change the Command to `/bin/fish` instead of `/bin/bash`.
+
 Then download my [config.fish](./configs/config.fish) and place it in `~/.config/fish/`			<br />
 Then download my [.xprofile](./configs/.xprofile) and place it in `~/`			<br />
 Then download my [xmonad.hs](./configs/xmonad.hs) and place it in `~/.xmonad/`		<br />
@@ -158,7 +160,7 @@ Then download the [Fira Code Nerd Font](./fonts/FiraCodeRegularNerdFontComplete.
 
 > To change the system theme and icons for both gtk and qt applications do the following. For gtk open lxappearance and choose from the installed themes, I personally use arc dark with papirus icons. For qt open qt5ct and change the theme to kvantum and open the kvantum manager, click change/delete theme and choose the theme you want.
 
-> To change konsole theme hit `ctrl-shift-,` create a new profile, and make it the default. Change the theme to Dark One Nuanced. Check the show all fonts checkbox and change the font to Fira Code Nerd for cool ligatures and glyphs. If a menu bar is visible at the top you can remove it by clicking on the settings tab and uncheck show menubar and all toolbars shown. 
+> To change konsole theme hit `ctrl-shift-,` open your profile and change the theme to Dark One Nuanced. Check the show all fonts checkbox and change the font to Fira Code Nerd for cool ligatures and glyphs. If a menu bar is visible at the top you can remove it by clicking on the settings tab and uncheck show menubar and all toolbars shown. 
 
 > To change rofi theme run `rofi-theme-selector` in the terminal, I use arc dark here too.
 
