@@ -18,7 +18,7 @@ Arch Wiki : https://wiki.archlinux.org/title/installation_guide
 
 ## Installation Instructions
 
-> If you are using vmware you have to first add this line to the virtual machine .VMX file
+> If you are using vmware you have to first add this line to the virtual machine `.vmx` file
 >
 > ```
 > firmware = "efi"
