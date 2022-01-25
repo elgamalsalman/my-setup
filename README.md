@@ -110,7 +110,7 @@ reboot
 This assumes that you have followed the Installation Instructions and have arch up and running and you have signed into your user account.
 
 ```
-sudo pacman -Syu git xorg lightdm lightdm-webkit2-greeter i3-gaps i3blocks rofi picom nitrogen neofetch lxappearance arc-solid-gtk-theme papirus-icon-theme qt5ct kvantum konsole firefox neovim pcmanfm file-roller mupdf exa ttf-fira-code
+sudo pacman -Syu git xorg lightdm lightdm-webkit2-greeter i3-gaps i3blocks rofi nitrogen neofetch lxappearance arc-solid-gtk-theme papirus-icon-theme qt5ct kvantum konsole firefox neovim pcmanfm file-roller mupdf exa ttf-fira-code
 sudo systemctl enable lightdm
 git clone https://aur.archlinux.org/yay.git
 cd yay
