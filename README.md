@@ -47,7 +47,7 @@ mkfs.ext4 /dev/sda3
 mount /dev/sda3 /mnt
 mkdir -p /mnt/boot/efi
 mount /dev/sda1 /mnt/boot/efi
-pacstrap /mnt base linux linux-firmware base-devel grub efibootmgr networkmanager git vim 
+pacstrap /mnt base linux linux-firmware base-devel grub efibootmgr networkmanager fish git vim
 genfstab -U /mnt >> /mnt/etc/fstab
 arch-chroot /mnt
 ln -sf /usr/share/zoneinfo/REGION/CITY /etc/localtime
@@ -67,15 +67,15 @@ and write the following in the file and save and quit
 
 ```
 LANG=en_US.UTF-8
+LANGUAGE=en_US
+LC_ALL=C
 ```
 
-then
+then run replacing `HOSTNAME` with the name of your computer, I personally called it `arch`
 
 ```
-vim /etc/hostname
+echo HOSTNAME > /etc/hostname
 ```
-
-and write the hostname you prefer (e.g. `arch`) then save and quit
 
 ```
 visudo
@@ -90,7 +90,7 @@ passwd
 and choose a root password then
 
 ```
-useradd -m -G wheel -s /bin/bash USERNAME
+useradd -m -G wheel -s /bin/fish USERNAME
 passwd USERNAME
 ```
 
@@ -110,28 +110,16 @@ reboot
 This assumes that you have followed the Installation Instructions and have arch up and running and you have signed into your user account.
 
 ```
-sudo pacman -Syu git xorg lightdm lightdm-webkit2-greeter xmonad xmonad-contrib xmobar rofi picom nitrogen neofetch lxappearance arc-solid-gtk-theme papirus-icon-theme qt5ct kvantum konsole firefox neovim pcmanfm file-roller mupdf exa ttf-fira-code fish
+sudo pacman -Syu git xorg lightdm lightdm-webkit2-greeter i3-gaps i3blocks rofi picom nitrogen neofetch lxappearance arc-solid-gtk-theme papirus-icon-theme qt5ct kvantum konsole firefox neovim pcmanfm file-roller mupdf exa ttf-fira-code
 sudo systemctl enable lightdm
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 cd
 sudo rm -r yay
-sudo yay -S lightdm-webkit-theme-aether arc-kde-git picom-ibhagwan-git
-chsh -s /usr/bin/fish
-mkdir ~/.xmonad
+yay -S lightdm-webkit-theme-aether arc-kde-git picom-ibhagwan-git polybar
 mkdir -p ~/.config/picom
 mkdir -p ~/.local/share/fonts
-vim .xmonad/xmonad.hs
-```
-
-write this basic configuration just to get xmonad working on reboot
-
-```
-import XMonad
-main  = xmonad def
-  { terminal = "konsole"
-  }
 ```
 
 then
@@ -143,7 +131,6 @@ reboot
 
 Then download my [config.fish](./configs/config.fish) and place it in `~/.config/fish/`			<br />
 Then download my [.xprofile](./configs/.xprofile) and place it in `~/`			<br />
-Then download my [xmonad.hs](./configs/xmonad.hs) and place it in `~/.xmonad/`		<br />
 Then download my [picom.conf](./configs/picom.conf) and place it in `~/.config/picom/`	<br />
 Then download my [environment](./configs/environment) and place it in `/etc/`		<br />
 Then download the [DarkOneNuanced.colorscheme](./colorschemes/DarkOneNuanced.colorscheme) and place it in `~/.local/share/konsole/`		<br />
