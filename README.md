@@ -117,7 +117,7 @@ cd yay
 makepkg -si
 cd
 sudo rm -r yay
-yay -S lightdm-webkit-theme-aether arc-kde-git picom-ibhagwan-git polybar
+yay -S lightdm-webkit-theme-aether arc-kde-git picom-ibhagwan-git polybar siji-git ttf-unifont
 mkdir -p ~/.config/picom
 mkdir -p ~/.local/share/fonts
 ```
