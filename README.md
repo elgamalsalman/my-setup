@@ -5,7 +5,7 @@ My main coding setup with instructions and configuration files so that I and any
 - Operating System : [arch](./arch/)
 - Display Server : [xorg](./xorg/)
 - Display (Login) Manager : [lightdm](./lightdm/)
-- Tiling Window Manager : [xmonad](./xmonad/)
+- Tiling Window Manager : [i3-gaps](./i3gaps/)
 - Application Launcher : [rofi]()
 - Terminal Emulator : [konsole]()
 - Text Editors : [fish-shell]()
@@ -130,7 +130,7 @@ reboot
 ```
 
 Then download my [config.fish](./configs/config.fish) and place it in `~/.config/fish/`			<br />
-Then download my [.xprofile](./configs/.xprofile) and place it in `~/`			<br />
+Then download my [i3config](./configs/i3config) rename it to `config` and place it in `~/.config/i3/`			<br />
 Then download my [picom.conf](./configs/picom.conf) and place it in `~/.config/picom/`	<br />
 Then download my [environment](./configs/environment) and place it in `/etc/`		<br />
 Then download the [DarkOneNuanced.colorscheme](./colorschemes/DarkOneNuanced.colorscheme) and place it in `~/.local/share/konsole/`		<br />
