@@ -4,5 +4,4 @@
 # Syntax: simple "KEY=VAL" pairs on separate lines
 #
 
-LC_ALL="C"
 QT_QPA_PLATFORMTHEME=qt5ct

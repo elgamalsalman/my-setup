@@ -1,5 +1,0 @@
-# Wallpaper
-nitrogen --restore &
-
-# Compositor
-picom --experimental-backends --backend glx &
