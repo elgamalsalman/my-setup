@@ -147,13 +147,13 @@ Then, if you are into it, download my [neofetch-config.conf](./configs/neofetch-
 
 > To change the system theme and icons for both gtk and qt applications do the following. For gtk open lxappearance and choose from the installed themes, I personally use arc dark with papirus icons. For qt open qt5ct and change the theme to kvantum and open the kvantum manager, click change/delete theme and choose the theme you want.
 
-> To change konsole theme hit `ctrl-shift-,` open your profile and change the theme to Dark One Nuanced. Check the show all fonts checkbox and change the font to Fira Code Nerd for cool ligatures and glyphs. If a menu bar is visible at the top you can remove it by clicking on the settings tab and uncheck show menubar and all toolbars shown. 
+> To change konsole theme hit `ctrl-shift-,` open your profile and change the theme to Dark One Nuanced. Check the show all fonts checkbox and change the font to Fira Code Nerd for cool ligatures and glyphs. Then go to miscellaneous and enable centering. If a menu bar is visible at the top you can remove it by clicking on the settings tab and uncheck show menubar and all toolbars shown. Also go to scrolling and set the scrollbar position to hidden
 
 > To change konsole copy and paste keybindings hit `ctrl-alt-,`, and search for the copy and the past keybindings and change them to `ctrl-c` and `ctrl-v` respectively.
 
 > To change rofi theme run `rofi-theme-selector` in the terminal, I use arc dark here too.
 
-> There is an arc theme for firefox if you are into that, click on the 3 bar menu > more tools > customise toolbar.
+> There is a dark theme for firefox if you are into that, press `Ctrl-Shift-A`.
 
 ## Github Connection Instructions
 
