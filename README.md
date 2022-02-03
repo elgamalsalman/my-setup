@@ -110,8 +110,9 @@ reboot
 This assumes that you have followed the Installation Instructions and have arch up and running and you have signed into your user account.
 
 ```
-sudo pacman -Syu git xorg lightdm lightdm-webkit2-greeter i3-gaps rofi nitrogen neofetch lxappearance arc-solid-gtk-theme papirus-icon-theme qt5ct kvantum konsole firefox neovim pcmanfm file-roller mupdf exa ttf-fira-code node npm
+sudo pacman -Syu git xorg lightdm lightdm-webkit2-greeter i3-gaps rofi nitrogen neofetch lxappearance arc-solid-gtk-theme papirus-icon-theme qt5ct kvantum konsole firefox neovim pcmanfm file-roller mupdf exa ttf-fira-code node npm xclip python3 python-pip
 sudo systemctl enable lightdm
+python3 -m pip install --user --upgrade pynvim
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
@@ -135,6 +136,7 @@ Then download my [picom.conf](./configs/picom.conf) and place it in `~/.config/p
 Then download my [environment](./configs/environment) and place it in `/etc/`		<br />
 Then download the [DarkOneNuanced.colorscheme](./colorschemes/DarkOneNuanced.colorscheme) and place it in `~/.local/share/konsole/`		<br />
 Then download the [Fira Code Nerd Font](./fonts/FiraCodeRegularNerdFontComplete.ttf) and place it in `~/.local/share/fonts/`		<br />
+Then download the [init.vim](./configs/init.vim) and [coc-settings.json](./configs/coc-settings.json) and place bot of them in `~/.config/nvim/` then open nvim and run `:PlugInstall`
 Then, if you are into it, download my [neofetch-config.conf](./configs/neofetch-config.conf), rename it to `config.conf` and place it in `~/.config/neofetch/`		<br />
 
 > if you are using vmware make sure you enable accelerated 3d graphics so that picom's glx backend (which is needed for blurring) doesn't freeze all the windows.
