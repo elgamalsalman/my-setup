@@ -110,14 +110,14 @@ reboot
 This assumes that you have followed the Installation Instructions and have arch up and running and you have signed into your user account.
 
 ```
-sudo pacman -Syu git xorg lightdm lightdm-webkit2-greeter i3-gaps rofi nitrogen neofetch lxappearance arc-solid-gtk-theme papirus-icon-theme qt5ct kvantum konsole firefox neovim pcmanfm file-roller mupdf exa ttf-fira-code acpi
+sudo pacman -Syu git xorg lightdm lightdm-webkit2-greeter i3-gaps rofi nitrogen neofetch lxappearance arc-solid-gtk-theme papirus-icon-theme qt5ct kvantum konsole firefox neovim pcmanfm file-roller mupdf exa ttf-fira-code node npm
 sudo systemctl enable lightdm
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 cd
 sudo rm -r yay
-yay -S lightdm-webkit-theme-aether arc-kde-git picom-ibhagwan-git
+yay -S lightdm-webkit-theme-aether arc-kde-git picom-ibhagwan-git vim-plug
 mkdir -p ~/.config/picom
 mkdir -p ~/.local/share/fonts
 ```
