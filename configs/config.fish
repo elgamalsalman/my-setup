@@ -3,6 +3,8 @@ if status is-interactive
 	alias lss='exa -ags=type --color-scale --header --icons --git';
 	alias neofetch='echo;/usr/bin/neofetch';
 
+	bind \b backward-kill-path-component;
+
 	neofetch;
 
 	set fish_greeting ""
