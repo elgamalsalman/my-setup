@@ -1,6 +1,6 @@
 if status is-interactive
-	alias ls='exa -lags=type --color-scale --header --icons --git';
-	alias lss='exa -ags=type --color-scale --header --icons --git';
+	alias ls='exa -las=type --color-scale --header --icons --git';
+	alias lss='exa -as=type --color-scale --header --icons --git';
 	alias neofetch='echo;/usr/bin/neofetch';
 	alias vim='nvim';
 
