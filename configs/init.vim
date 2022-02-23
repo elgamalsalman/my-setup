@@ -32,6 +32,9 @@ Plug 'akinsho/toggleterm.nvim'
 " Devicons
 Plug 'ryanoasis/vim-devicons'
 
+" Toggle Fullscreen
+Plug 'markstory/vim-zoomwin'
+
 " ---------FUNCTIONALITY---------
 " Snippets
 Plug 'honza/vim-snippets'
@@ -121,8 +124,8 @@ function! s:isPrettierLanguage()
 	return 1
 endfunction
 vmap <expr> = <SID>isPrettierLanguage() ? "<Plug>(coc-format-selected)" : "="
-nmap <expr> == <SID>isPrettierLanguage() ? "V<Plug>(coc-format-selected)" : "=="
-nmap <expr> = <SID>isPrettierLanguage() ? "<Plug>(coc-format-selected)" : "="
+nn <expr> == <SID>isPrettierLanguage() ? "V<Plug>(coc-format-selected)" : "=="
+nn <expr> = <SID>isPrettierLanguage() ? "<Plug>(coc-format-selected)" : "="
 
 " Fern File Explorer
 function! s:init_fern() abort
@@ -160,4 +163,13 @@ augroup fern-custom
 augroup END
 
 " Terminal
-nmap <C-k><C-t> :ToggleTerm<CR>
+nn <C-k><C-t> :ToggleTerm<CR>
+tno <C-k><C-t> <C-\><C-n>:ToggleTerm<CR>
+tno <C-[> <C-\><C-n>
+tno <C-e> <C-\><C-n><C-e>
+tno <C-y> <C-\><C-n><C-y>
+
+" Zoom on Window
+nn <M-CR> :ZoomToggle<Cr>
+tno <M-CR> <C-\><C-n>:ZoomToggle<CR>i
+ino <M-CR> <C-o>:ZoomToggle<CR>

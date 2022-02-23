@@ -118,7 +118,7 @@ cd yay
 makepkg -si
 cd
 sudo rm -r yay
-yay -S lightdm-webkit-theme-aether arc-kde-git picom-ibhagwan-git vim-plug
+yay -S lightdm-webkit-theme-aether arc-kde-git picom-ibhagwan-git vim-plug wscat
 mkdir -p ~/.config/picom
 mkdir -p ~/.local/share/fonts
 ```
