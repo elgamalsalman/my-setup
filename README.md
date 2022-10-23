@@ -1,4 +1,4 @@
-# My Environment
+# My Setup
 
 My main coding setup with instructions and configuration files so that I and anyone else interested can easily make a replica of it on any computer.
 
